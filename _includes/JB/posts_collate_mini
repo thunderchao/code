@@ -1,11 +1,11 @@
 {% comment %}<!--
 Collate_posts helper. Collated posts by year and month.
 Usage:
-  1) assign the 'posts_collate' variable to a valid array of posts.
-  2) include JB/posts_collate
+  1) assign the 'posts_collate_mini' variable to a valid array of posts without fluff.
+  2) include JB/posts_collate_mini
   example:
-    {% assign posts_collate = site.posts %}
-    {% include JB/posts_collate %}
+    {% assign posts_collate_mini = site.posts %}
+    {% include JB/posts_collate_mini %}
 
   Ordering:
     Posts are displayed in reverse chronological order.
@@ -26,31 +26,11 @@ Usage:
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
   
-    {% if forloop.first %}
-      <h2>{{this_year}}</h2>
-      <h3>{{this_month}}</h3>
-      <ul>
-    {% endif %}
+    <ul>
   
     <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br />
         {{ post.description }}</li>
   
-    {% if forloop.last %}
-      </ul>
-    {% else %}
-      {% if this_year != next_year %}
-        </ul>
-        <h2>{{next_year}}</h2>
-        <h3>{{next_month}}</h3>
-        <ul>
-      {% else %}    
-        {% if this_month != next_month %}
-          </ul>
-          <h3>{{next_month}}</h3>
-          <ul>
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+    </ul>
 {% endif %}
-{% assign posts_collate = nil %}
+{% assign posts_collate_mini = nil %}

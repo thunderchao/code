@@ -1,0 +1,24 @@
+---
+layout: page
+title: CODE.NATHANIELRAY
+---
+
+<div class="row">
+    <div class="span8">
+        <h2>Welcome to {{ page.title }}</h2>
+        <p>It should be fairly obvious what this site is about. You will
+        find a link to the most recent blog posts to the right, and below
+        you'll find links to some of the highlighted/discussed code in
+        the blog posts.</p>
+    </div>
+  
+    <div class="span4">
+        <h4>The last few posts:</h4>
+        <ul class="posts">
+            {% for post in site.posts limit:6 %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="/archive.html">Full post archive</a> 
+    </div>
+</div>

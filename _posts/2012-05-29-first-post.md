@@ -2,6 +2,7 @@
 layout: post
 title: "Obligatory 'First Post' First Post"
 category: meta
+description: "Introducing my brand new code blog and what you can expect from it."
 tags: [git, jekyll]
 ---
 {% include JB/setup %}
