@@ -59,8 +59,8 @@ html, body {
 .tag_box a {
 	padding: 3px 6px;
 	margin: 2px;
-	background: #eee;
-	color:#005F6B;
+	background: #333333;
+	color:#F2A516;
 	border-radius: 3px;
 	text-decoration:none;
 }
