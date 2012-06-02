@@ -4,7 +4,7 @@ title: "Gitting it Done"
 tagline: "Git it? Puns! Git!"
 description: "learning git"
 category: learning
-tags: [git, jekyll]
+tags: [git, jekyll, bootstrap]
 ---
 {% include JB/setup %}
 
