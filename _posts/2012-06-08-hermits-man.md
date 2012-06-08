@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hermits, man"
+title: "Hermits, Man"
 tagline: "hiding under rocks since 304 BC"
 description: "Writing a simple hermit generator"
 category: showing
@@ -23,7 +23,14 @@ language though.
 
 The actual mechanic is a simple step-by-step set of RNGs. See here:
 
-<script src="https://gist.github.com/2893923.js?file=gistfile1.py"></script>
+<!--<script src="https://gist.github.com/2893923.js?file=gistfile1.py"></script>-->
+
+<pre><code class="python">nr = 5
+while nr >= 0:
+    if nr == 5:
+        obs_res = obsession[random.randint(1,10)]
+        nr -= 1
+</code></pre>
 
 This process continues until `nr == 0`, which allows the program to run
 through each of the 5 randomized elements then `print` out the results. 
@@ -46,7 +53,19 @@ cover the hermit's obsession, with whom he will converse, the kinds of
 people he tolerates, a defining quirk, and his secret. Here's the `converse`
 dict:
 
-<script src="https://gist.github.com/2893927.js?file=gistfile1.py"></script>
+<!--<script src="https://gist.github.com/2893927.js?file=gistfile1.py"></script>-->
+
+<pre class="prettyprint"><code class="python">converse = { 1 : 'no one (he\'s mute)',
+             2 : 'birds',
+             3 : 'plants',
+             4 : 'animals',
+             5 : 'rocks',
+             6 : 'invisible friend',
+             7 : 'ghosts',
+             8 : 'puppets',
+             9 : 'dead mother\'s corpse',
+             10: 'penis', }
+</code></pre>
 
 So it's not a *total* random hermit: he has bounds and only 5 given areas
 of randomization. You'll have to supply the name and clothing and his 
@@ -63,7 +82,7 @@ Amusing? Sure. Useful? Maybe. Awesome? Most definitely.
 
 ### Give it a spin
 
-Check out the github page for [`hermit-gen.py` here](https://github.com/thunderchao/roleplaying/blob/master/hermit-gen.py).
+Check out the github page for `hermit-gen.py` [here](https://github.com/thunderchao/roleplaying/blob/master/hermit-gen.py).
 Oh, and just as a note, all my code is in **python 3** (I know, I know, 
 but that's what I learned). For something like this, I think you might 
 only have to change one or two things to get it to work in python 2, but
