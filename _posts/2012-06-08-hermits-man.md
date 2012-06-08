@@ -23,13 +23,7 @@ language though.
 
 The actual mechanic is a simple step-by-step set of RNGs. See here:
 
-```python
-nr = 5
-while nr >= 0:
-    if nr == 5:
-        obs_res = obsession[random.randint(1,10)]
-        nr -= 1
-```
+<script src="https://gist.github.com/2893923.js?file=gistfile1.py"></script>
 
 This process continues until `nr == 0`, which allows the program to run
 through each of the 5 randomized elements then `print` out the results. 
@@ -52,18 +46,7 @@ cover the hermit's obsession, with whom he will converse, the kinds of
 people he tolerates, a defining quirk, and his secret. Here's the `converse`
 dict:
 
-```python
-converse = { 1 : 'no one (he\'s mute)',
-             2 : 'birds',
-             3 : 'plants',
-             4 : 'animals',
-             5 : 'rocks',
-             6 : 'invisible friend',
-             7 : 'ghosts',
-             8 : 'puppets',
-             9 : 'dead mother\'s corpse',
-             10: 'penis', }
-```
+<script src="https://gist.github.com/2893927.js?file=gistfile1.py"></script>
 
 So it's not a *total* random hermit: he has bounds and only 5 given areas
 of randomization. You'll have to supply the name and clothing and his 
