@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Gitting it Done"
-tagline: "Git it? Puns! Git!"
-description: "learning git"
+tagline: "git it? puns! git!"
+description: "Learning git"
 category: learning
 tags: [git, jekyll, bootstrap]
 ---
