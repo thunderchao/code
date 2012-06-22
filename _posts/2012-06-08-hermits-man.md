@@ -4,7 +4,7 @@ title: "Hermits, Man"
 tagline: "hiding under rocks since 304 BC"
 description: "Writing a simple hermit generator"
 category: showing
-tags: [python, generator]
+tags: [python, generator, roleplaying]
 ---
 {% include JB/setup %}
 
@@ -25,12 +25,13 @@ The actual mechanic is a simple step-by-step set of RNGs. See here:
 
 <!--<script src="https://gist.github.com/2893923.js?file=gistfile1.py"></script>-->
 
-<pre><code class="python">nr = 5
+{% highlight python %}
+nr = 5
 while nr >= 0:
     if nr == 5:
         obs_res = obsession[random.randint(1,10)]
         nr -= 1
-</code></pre>
+{% endhighlight %}
 
 This process continues until `nr == 0`, which allows the program to run
 through each of the 5 randomized elements then `print` out the results. 
@@ -55,7 +56,8 @@ dict:
 
 <!--<script src="https://gist.github.com/2893927.js?file=gistfile1.py"></script>-->
 
-<pre class="prettyprint"><code class="python">converse = { 1 : 'no one (he\'s mute)',
+{% highlight python %}
+converse = { 1 : 'no one (he\'s mute)',
              2 : 'birds',
              3 : 'plants',
              4 : 'animals',
@@ -65,7 +67,7 @@ dict:
              8 : 'puppets',
              9 : 'dead mother\'s corpse',
              10: 'penis', }
-</code></pre>
+{% endhighlight %}
 
 So it's not a *total* random hermit: he has bounds and only 5 given areas
 of randomization. You'll have to supply the name and clothing and his 
