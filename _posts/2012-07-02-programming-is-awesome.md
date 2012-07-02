@@ -36,7 +36,7 @@ So I opened up the python IDLE and pulled out this magic (after a little
 googling, of course, to get the `.zfill()` and `urllib.request.urlretrieve()` 
 functions and syntax):
 
-{& highlight python &}
+{% highlight python %}
 >>> import urllib.request
 >>> span = range(1,18)
 >>> url = 'http://media.URL.com/digital_assets_table/malinowski_1e/image_ppts/'
@@ -62,9 +62,9 @@ links, that's for sure.
 
 Line 2 there is superfluous, doing something like 
 
-{& highlight python &}
+{% highlight python %}
 >>> for x in range(1,18):
-{& endhighlight &}
+{% endhighlight %}
 
 works just as well. And I'd save the script as a file first so I don't have 
 to go hunting down tmp files.
