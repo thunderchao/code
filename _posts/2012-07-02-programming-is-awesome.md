@@ -66,10 +66,12 @@ Line 2 there is superfluous, doing something like
 >>> for x in range(1,18):
 {% endhighlight %}
 
-works just as well. And I'd save the script as a file first so I don't have 
+works just as well. Except that I just realized that the `range()` function 
+is not inclusive, so gotta bump the number up to 19. Now to manually download 
+chapter 18's files. Oh, and I'd save the script as a file first so I don't have 
 to go hunting down tmp files.
 
-But look at that, only two things! This is why programming is awesome.
+But look at that, only three things! This is why programming is awesome.
 
 Tell me why you think programming is awesome:
 [@thunderchao](https://twitter.com/intent/tweet?screen_name=thunderchao).
